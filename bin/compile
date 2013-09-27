@@ -14,8 +14,8 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 echo "Downloading PDF files to /bin"
-curl -s -o /bin/pdfhtml https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml
-curl -s -o /bin/pdfhtml-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml-onejar.jar
-curl -s -o /bin/pdfmerger https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger
-curl -s -o /bin/pdfmerger-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger-onejar.jar
+/usr/bin/curl -s -o /bin/pdfhtml https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml
+/usr/bin/curl -s -o /bin/pdfhtml-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml-onejar.jar
+/usr/bin/curl -s -o /bin/pdfmerger https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger
+/usr/bin/curl -s -o /bin/pdfmerger-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger-onejar.jar
 echo "done"
