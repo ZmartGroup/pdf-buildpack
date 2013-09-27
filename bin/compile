@@ -14,8 +14,11 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 
 echo "Downloading PDF files to build dir"
-curl -s -o $BUILD_DIR/app/bin/pdfhtml https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml
-curl -s -o $BUILD_DIR/app/bin/pdfhtml-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml-onejar.jar
-curl -s -o $BUILD_DIR/app/bin/pdfmerger https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger
-curl -s -o $BUILD_DIR/app/bin/pdfmerger-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger-onejar.jar
+
+mkdir -p $BUILD_DIR/.heroku/vendor/bin
+
+curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfhtml https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml
+curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfhtml-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml-onejar.jar
+curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfmerger https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger
+curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfmerger-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger-onejar.jar
 echo "done"
