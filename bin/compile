@@ -13,9 +13,9 @@ unset GIT_DIR
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-echo "Downloading PDF files to ."
-curl -s -o $BUILD_DIR/bin/pdfhtml https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml
-curl -s -o $BUILD_DIR/bin/pdfhtml-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml-onejar.jar
-curl -s -o $BUILD_DIR/bin/pdfmerger https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger
-curl -s -o $BUILD_DIR/bin/pdfmerger-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger-onejar.jar
+echo "Downloading PDF files to build dir"
+curl -s -o $BUILD_DIR/pdfhtml https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml
+curl -s -o $BUILD_DIR/pdfhtml-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfhtml-onejar.jar
+curl -s -o $BUILD_DIR/pdfmerger https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger
+curl -s -o $BUILD_DIR/pdfmerger-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger-onejar.jar
 echo "done"
