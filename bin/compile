@@ -25,6 +25,9 @@ curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfhtml-onejar.jar https://s3-eu-west-1
 curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfmerger https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger
 curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfmerger-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfmerger-onejar.jar
 
-chmod +x $BUILD_DIR/.heroku/vendor/bin/pdfmerger $BUILD_DIR/.heroku/vendor/bin/pdfhtml
+curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfformfiller https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfformfiller
+curl -s -o $BUILD_DIR/.heroku/vendor/bin/pdfformfiller-onejar.jar https://s3-eu-west-1.amazonaws.com/zmartgroup/pdf/pdfformfiller-onejar.jar
+
+chmod +x $BUILD_DIR/.heroku/vendor/bin/pdfmerger $BUILD_DIR/.heroku/vendor/bin/pdfhtml $BUILD_DIR/.heroku/vendor/bin/pdfformfiller
 
 echo "done"
